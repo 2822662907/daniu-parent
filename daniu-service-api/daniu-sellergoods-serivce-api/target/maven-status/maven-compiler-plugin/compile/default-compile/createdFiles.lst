@@ -1,0 +1,14 @@
+com\example\feign\GoodsFeign.class
+com\example\pojo\ItemCat.class
+com\example\pojo\Item.class
+com\example\pojo\Seller.class
+com\example\pojo\Goods.class
+com\example\entity\GoodsEntity.class
+com\example\feign\ItemFeign.class
+com\example\entity\SpecEntity.class
+com\example\pojo\TypeTemplate.class
+com\example\pojo\SpecificationOption.class
+com\example\pojo\Brand.class
+com\example\feign\ItemCatFeign.class
+com\example\pojo\GoodsDesc.class
+com\example\pojo\Specification.class

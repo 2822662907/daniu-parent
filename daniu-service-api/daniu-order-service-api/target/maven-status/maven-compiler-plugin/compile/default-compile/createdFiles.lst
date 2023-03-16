@@ -1,0 +1,5 @@
+com\example\order\group\Cart.class
+com\example\order\pojo\Order.class
+com\example\order\feign\OrderFeign.class
+com\example\order\pojo\OrderItem.class
+com\example\order\feign\OrderItemFeign.class

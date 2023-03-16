@@ -1,0 +1,13 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: sms
+  rabbitmq:
+    host: 192.168.110.128
+    port: 5672
+    username: guest
+    password: guest
+sms:
+  accessKeyId: LTAI5tL1oZ7THzn2S1nzoUwk
+  accessKeySecret: 5LipvG9xszJStXBo3wIw7zTfjp2DK4

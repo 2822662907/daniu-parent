@@ -1,0 +1,26 @@
+server:
+  port: 9102
+spring:
+  application:
+    name: item-web
+  thymeleaf:
+    cache: false
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      instance:
+        prefer-ip-address: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 100000
+feign:
+  hystrix:
+    enabled: true
+pagePath: D:\\items

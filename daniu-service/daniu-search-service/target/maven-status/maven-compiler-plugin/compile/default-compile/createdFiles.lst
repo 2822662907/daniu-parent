@@ -1,0 +1,5 @@
+com\example\search\controller\SkuController.class
+com\example\search\dao\SkuEsMapper.class
+com\example\search\service\impl\SkuServiceImpl.class
+com\example\search\service\SkuService.class
+com\example\search\SearchApplication.class

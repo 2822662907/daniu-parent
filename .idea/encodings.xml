@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-common-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-common-db/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-gateway/daniu-gateway-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-gateway/daniu-gateway-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-content-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-content-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-item-web-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-item-web-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-order-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-order-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-search-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-search-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-search-web-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-search-web-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-user-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-user-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-canal-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-canal-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-content-servic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-content-servic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-file-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-order-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-search-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-sms-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-sms-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-user-oauth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-user-oauth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web/daniu-item-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web/daniu-item-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web/daniu-search-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web/daniu-search-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

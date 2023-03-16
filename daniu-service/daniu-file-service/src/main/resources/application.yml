@@ -1,0 +1,21 @@
+spring:
+  servlet:
+    multipart:
+      #如果是想要不限制文件上传的大小，那么就把两个值都设置为-1
+      max-file-size: 5MB #设置单个文件的大小
+      max-request-size: 10MB #设置单次请求的文件的总大小
+  application:
+    name: file
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+
+FILE_SERVER_URL: http://192.168.110.128:8080/

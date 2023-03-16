@@ -1,0 +1,26 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: user-web
+  rabbitmq:
+    host: 192.168.110.128
+    port: 5672
+    username: guest
+    password: guest
+  redis:
+    host: 192.168.110.128
+    port: 6379
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/daniudb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: admin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,57 @@
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  web:
+    exposure:
+      include: true
+
+spring:
+  application:
+    name: gateway-web
+  redis:
+    host: 192.168.110.128
+    port: 6379
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOrigins: "*"
+            allowedMedthods:
+              - GET
+              - POST
+              - DELECT
+              - PUT
+      routes:
+        - id: daniu_goods_route
+          uri: http://localhost:9001
+          predicates:
+            - Path=/brand/**,goods/**
+          filters:
+          - name: RequestRateLimiter
+            args:
+              key-resolver: "#{@ipKeyResolver}"
+              redis-rate-limiter.replenishRate: 1
+              redis-rate-limiter.buratCapacity: 2
+        - id: daniu_login_route
+          uri: lb://WEB
+          predicates:
+            - Path=/user/**
+        - id: daniu-user-route
+          uri: lb://USER-WEB
+          predicates:
+            - Path=user/**,address/**,/areas/**,/cities/**,/provinces/**
+        # 购物车
+        - id: daniu_cart_route
+          uri: lb://ORDER
+          predicates:
+            - Path=/cart/**

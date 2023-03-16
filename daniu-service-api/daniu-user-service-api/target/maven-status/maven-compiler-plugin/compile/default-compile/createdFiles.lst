@@ -1,0 +1,6 @@
+com\example\user\pojo\Address.class
+com\example\user\pojo\Provinces.class
+com\example\user\pojo\Areas.class
+com\example\user\pojo\User.class
+com\example\user\feign\UserFeign.class
+com\example\user\pojo\Cities.class
