@@ -220,4 +220,9 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements It
         queryWrapper.eq("status",status);
         return this.list(queryWrapper);
     }
+
+    @Override
+    public void decrCount(String username) {
+
+    }
 }

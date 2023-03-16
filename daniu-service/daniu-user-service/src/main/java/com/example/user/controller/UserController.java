@@ -194,7 +194,6 @@ public class UserController {
 
             String jwt = JwtUtil.createJWT(UUID.randomUUID().toString(), JSON.toJSONString(info), info, null);
 
-            System.out.println(JwtUtil.parseJWT(jwt));
 
 
             //创建Cookie对象

@@ -10,9 +10,11 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.feign.ItemFeign;
 import com.example.order.dao.OrderItemMapper;
 import com.example.order.dao.OrderMapper;
+import com.example.order.dao.PayLogMapper;
 import com.example.order.group.Cart;
 import com.example.order.pojo.Order;
 import com.example.order.pojo.OrderItem;
+import com.example.order.pojo.PayLog;
 import com.example.order.service.OrderService;
 import com.example.entity.PageResult;
 import com.example.util.IdWorker;
@@ -23,6 +25,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -35,13 +38,15 @@ import java.util.List;
 public class OrderServiceImpl extends ServiceImpl<OrderMapper,Order> implements OrderService {
         @Autowired
         private RedisTemplate redisTemplate;
-        @Autowired
+        @Autowired(required = false)
         private OrderItemMapper orderItemMapper;
 
         @Autowired
         private IdWorker idWorker;
-        @Autowired
+        @Autowired(required = false)
         private ItemFeign itemFeign;
+        @Autowired(required = false)
+        private PayLogMapper payLogMapper;
 
     /**
      * Order条件+分页查询
@@ -224,6 +229,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper,Order> implements 
     public void add(Order order){
         // 得到购物车数据
         List<Cart> cartList = (List<Cart>) redisTemplate.boundHashOps("cartList").get(order.getOrderId());
+
+        List<String> orderIdList = new ArrayList<>();
+        double total_money = 0;
         // 遍历购物车，根据信息创建订单对象
         for (Cart cart : cartList) {
             long orderId = idWorker.nextId();
@@ -247,10 +255,36 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper,Order> implements 
                 // 添加订单明细数据到tb_order_item
                 orderItemMapper.insert(orderItem);
             }
+            orderIdList.add(orderId+"");
+            total_money+=money;
             // 设置订单总金额
             tborder.setPayment(new BigDecimal(money));
             // 添加订单信息到数据库
             save(tborder);
+        }
+        if ("1".equals(order.getPaymentType())) {//线上支付
+            PayLog payLog = new PayLog();
+            String outTradeNo = idWorker.nextId()+"";//支付订单号
+            payLog.setOutTradeNo(outTradeNo);
+            payLog.setCreateTime(new Date());//创建时间
+
+            //把元转换成分
+            BigDecimal total_money1 = BigDecimal.valueOf(total_money);
+            BigDecimal cs = BigDecimal.valueOf(100l);
+            BigDecimal multiply = total_money1.multiply(cs);
+            payLog.setTotalFee(multiply.toBigInteger().longValue());// 总金额
+            payLog.setUserId(order.getUserId());
+            payLog.setTradeState("0");//支付状态  0 未支付 1已经支付
+            //订单号列表，逗号分隔
+            String ids= orderIdList.toString()//[ aa,cc ]
+                    .replace("[","")
+                    .replace(" ","")
+                    .replace("]","");
+            payLog.setOrderList(ids);//订单号列表，逗号分隔
+            payLog.setPayType(order.getPaymentType());// 支付类型
+            payLogMapper.insert(payLog);
+            redisTemplate.boundHashOps("paylog").put(order.getOrderId(),payLog);
+
         }
         //******************减少库存********************************
         //减少库存  调用goods 微服务的 feign 减少库存

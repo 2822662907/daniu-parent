@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus?">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="js/qrious.min.js"></script>
+ </head>
+ <body>
+ <!--声明一个图片节点，用来显示二维码-->
+ <img id="mypic">
+  <script>
+      new QRious({
+          element: document.getElementById('mypic'),
+          size: 250,
+          level: 'H',
+          background: 'white',
+          value: '${qrcode}'
+      })
+  </script>
+ </body>
+</html>

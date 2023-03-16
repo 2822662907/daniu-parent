@@ -34,21 +34,21 @@ public class CookieUtil  {
          * @param request
          * @return map<cookieName,cookieValue>
          */
-          public static Map<String,String> readCookie(HttpServletRequest request,String ... cookieNmaes){
-              Map<String, String> cookieMap = new HashMap<>();
+          public static Map<String,String> readCookie(HttpServletRequest request,String ... cookieNames){
+              Map<String,String> cookieMap = new HashMap<String,String>();
               Cookie[] cookies = request.getCookies();
-              if (cookies!=null){
+              if (cookies != null) {
                   for (Cookie cookie : cookies) {
-                      String name = cookie.getName();
-                      String value = cookie.getValue();
-
-                      for (int i = 0; i < cookieNmaes.length; i++) {
-                          if (cookieNmaes[i].equals(name)){
-                              cookieMap.put(name,value);
+                      String cookieName = cookie.getName();
+                      String cookieValue = cookie.getValue();
+                      for(int i=0;i<cookieNames.length;i++){
+                          if(cookieNames[i].equals(cookieName)){
+                              cookieMap.put(cookieName,cookieValue);
                           }
                       }
                   }
               }
               return cookieMap;
+
           }
 }

@@ -7,28 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="daniu-common" />
+        <module name="daniu-search-service-api" />
         <module name="daniu-file-service" />
+        <module name="daniu-common-db" />
+        <module name="daniu-item-web" />
+        <module name="daniu-pay-service" />
         <module name="daniu-user-service" />
+        <module name="daniu-search-web" />
+        <module name="daniu-content-service-api" />
         <module name="daniu-sellergoods-serivce-api" />
+        <module name="daniu-user-oauth" />
+        <module name="daniu-order-service" />
+        <module name="daniu-canal-service" />
+        <module name="daniu-gateway-web" />
+        <module name="daniu-order-service-api" />
+        <module name="daniu-item-web-api" />
+        <module name="daniu-search-web-service-api" />
         <module name="daniu-user-service-api" />
         <module name="daniu-sms-service" />
-        <module name="daniu-item-web-api" />
         <module name="daniu-search-service" />
         <module name="daniu-eureka" />
-        <module name="daniu-canal-service" />
         <module name="daniu-sellergoods-service" />
-        <module name="daniu-user-oauth" />
-        <module name="daniu-item-web" />
-        <module name="daniu-gateway-web" />
-        <module name="daniu-search-service-api" />
-        <module name="daniu-order-service" />
-        <module name="daniu-common" />
-        <module name="daniu-common-db" />
-        <module name="daniu-content-service-api" />
-        <module name="daniu-order-service-api" />
         <module name="daniu-content-servic" />
-        <module name="daniu-search-web" />
-        <module name="daniu-search-web-service-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -56,6 +57,7 @@
       <module name="daniu-item-web-api" options="-parameters" />
       <module name="daniu-order-service" options="-parameters" />
       <module name="daniu-order-service-api" options="-parameters" />
+      <module name="daniu-pay-service" options="-parameters" />
       <module name="daniu-searc-web" options="-parameters" />
       <module name="daniu-search-service" options="-parameters" />
       <module name="daniu-search-service-api" options="-parameters" />

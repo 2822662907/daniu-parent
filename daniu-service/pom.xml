@@ -20,6 +20,7 @@
         <module>daniu-sms-service</module>
         <module>daniu-user-service</module>
         <module>daniu-order-service</module>
+        <module>daniu-pay-service</module>
     </modules>
     <dependencies>
         <dependency>

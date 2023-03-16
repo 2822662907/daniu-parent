@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/daniu-web/daniu-search-web/pom.xml" />
         <option value="$PROJECT_DIR$/daniu-web/pom.xml" />
+        <option value="$PROJECT_DIR$/daniu-service/daniu-pay-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
